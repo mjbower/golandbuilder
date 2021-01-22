@@ -4,7 +4,7 @@ ARG projectname
 # Git is required for fetching the dependencies.
 ENV projectname=${projectname}
 RUN apk update && apk add --no-cache git
-#WORKDIR $GOPATH/src/github.com/Maersk-Global/${projectname}
+WORKDIR $GOPATH/src/github.com/${projectname}
 COPY . .
 # Fetch dependencies.
 # Using go get.
