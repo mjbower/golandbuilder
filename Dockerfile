@@ -6,6 +6,7 @@ ENV projectname=${projectname}
 RUN apk update && apk add --no-cache git
 WORKDIR $GOPATH/src/github.com/${projectname}
 COPY . .
+COPY examples.txt examples.txt
 # Fetch dependencies.
 # Using go get.
 #RUN go get -d -v
